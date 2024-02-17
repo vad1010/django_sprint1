@@ -1,0 +1,7 @@
+{% if request.resolver_match.view_name == 'blog:index' %}
+  {{ post.text|truncatewords:10 }}
+{% else %}
+  {{post.text|linebreaksbr}}
+{% endif %}
+
+ 
