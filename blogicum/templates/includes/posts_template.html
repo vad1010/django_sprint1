@@ -1,7 +1,19 @@
-{% if request.resolver_match.view_name == 'blog:index' %}
-  {{ post.text|truncatewords:10 }}
-{% else %}
-  {{post.text|linebreaksbr}}
-{% endif %}
+<li>
+  Категория: <a href="{% url 'blog:category_posts' post.category %}">
+  {{ post.category }} </a>
+</li>
+<br>
+<p>
+  {% if request.resolver_match.view_name == 'blog:index' %}
+    {{ post.text|truncatewords:10 }}
+  {% else %}
+    {{post.text|linebreaksbr}}
+  {% endif %}
+</p>
+  
+   
+  
+
+
 
  

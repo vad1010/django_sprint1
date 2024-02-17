@@ -1,21 +1,13 @@
 {% extends "base.html" %}
 {% block title %} {{ post.location }}. {{ post.date }} {% endblock %}
 {% block content %}
-  <article>
-    <ul>
-      <li>
-        Место: {{ post.location }}              
-      </li>
-      <li>
-        Дата: {{ post.date }} 
-      </li>
-      <li>
-        Категория: <a href="{% url 'blog:category_posts' post.category %}">
-          {{ post.category }} </a>
-      </li>
-    </ul>     
-    <p>
-      {% include "includes/posts_template.html" %}
-    </p>
-  </article>
+<article>
+  <li>
+    Место: {{ post.location }}              
+  </li>
+  <li>
+    Дата: {{ post.date }} 
+  </li>
+  {% include "includes/posts_template.html" %}
+</article>
 {% endblock %}
