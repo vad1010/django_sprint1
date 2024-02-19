@@ -1,13 +1,5 @@
 {% extends "base.html" %}
 {% block title %} {{ post.location }}. {{ post.date }} {% endblock %}
 {% block content %}
-<article>
-  <li>
-    Место: {{ post.location }}              
-  </li>
-  <li>
-    Дата: {{ post.date }} 
-  </li>
-  {% include "includes/posts_template.html" %}
-</article>
+{% include "includes/posts_template.html" %}
 {% endblock %}
